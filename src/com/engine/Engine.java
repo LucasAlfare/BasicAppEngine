@@ -10,7 +10,7 @@ public class Engine implements Runnable {
     private float scale;
 
     int frames = 0, updates = 0;
-    private boolean isRunning;
+    private boolean running;
 
     private Window window;
     private Renderer renderer;
@@ -33,7 +33,7 @@ public class Engine implements Runnable {
 
     @Override
     public void run() {
-        isRunning = true;
+        running = true;
 
         final double ns = 1e9 / RATE;
         long now;
@@ -41,7 +41,7 @@ public class Engine implements Runnable {
         long lastTime = System.nanoTime();
         float delta = 0;
 
-        while (isRunning) {
+        while (running) {
             now = System.nanoTime();
             delta += (now - lastTime) / ns;
             lastTime = now;
@@ -77,6 +77,14 @@ public class Engine implements Runnable {
     public void setSize(int width, int height) {
         setWidth(width);
         setHeight(height);
+    }
+
+    public boolean isRunning() {
+        return running;
+    }
+
+    public void setRunning(boolean running) {
+        this.running = running;
     }
 
     public int getWidth() {

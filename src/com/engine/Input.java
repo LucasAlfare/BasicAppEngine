@@ -55,66 +55,6 @@ public class Input implements KeyListener, MouseListener, MouseMotionListener, M
         return keys[keyCode] && !lastKeys[keyCode];
     }
 
-    public static boolean isButton(int button) {
-        return buttons[button];
-    }
-
-    public static boolean isButtonUp(int button) {
-        return !buttons[button] && lastButtons[button];
-    }
-
-    public static boolean isButtonDown(int button) {
-        return buttons[button] && !lastButtons[button];
-    }
-
-    public static boolean isLeft() {
-        return isKey(KeyEvent.VK_LEFT) || isKey(KeyEvent.VK_A);
-    }
-
-    public static boolean isLeftDown() {
-        return isKeyDown(KeyEvent.VK_LEFT) || isKeyDown(KeyEvent.VK_A);
-    }
-
-    public static boolean isLeftUp() {
-        return isKeyUp(KeyEvent.VK_LEFT) || isKeyUp(KeyEvent.VK_A);
-    }
-
-    public static boolean isRight() {
-        return isKey(KeyEvent.VK_RIGHT) || isKey(KeyEvent.VK_D);
-    }
-
-    public static boolean isRightDown() {
-        return isKeyDown(KeyEvent.VK_RIGHT) || isKeyDown(KeyEvent.VK_D);
-    }
-
-    public static boolean isRightUp() {
-        return isKeyUp(KeyEvent.VK_RIGHT) || isKeyUp(KeyEvent.VK_D);
-    }
-
-    public static boolean isUp() {
-        return isKey(KeyEvent.VK_UP) || isKey(KeyEvent.VK_W);
-    }
-
-    public static boolean isUpDown() {
-        return isKeyDown(KeyEvent.VK_UP) || isKeyDown(KeyEvent.VK_W);
-    }
-
-    public static boolean isUpUp() {
-        return isKeyUp(KeyEvent.VK_UP) || isKeyUp(KeyEvent.VK_W);
-    }
-
-    public static boolean isDown() {
-        return isKey(KeyEvent.VK_DOWN) || isKey(KeyEvent.VK_S);
-    }
-
-    public static boolean isDownDown() {
-        return isKeyDown(KeyEvent.VK_DOWN) || isKeyDown(KeyEvent.VK_S);
-    }
-
-    public static boolean isDownUp() {
-        return isKeyUp(KeyEvent.VK_DOWN) || isKeyUp(KeyEvent.VK_S);
-    }
-
     public static boolean isMouseButton(int button) {
         return buttons[button];
     }
@@ -208,11 +148,5 @@ public class Input implements KeyListener, MouseListener, MouseMotionListener, M
 
     public static Point getMousePoint() {
         return mousePoint;
-    }
-
-    public static void setMousePoint(Point mousePoint) {
-        Input.mousePoint = mousePoint;
-        Input.mouseX = mousePoint.x;
-        Input.mouseY = mousePoint.y;
     }
 }

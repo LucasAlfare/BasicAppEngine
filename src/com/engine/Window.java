@@ -7,16 +7,13 @@ import java.awt.image.BufferedImage;
 
 public class Window {
 
-    private final Engine engine;
-
     private final JFrame frame;
     private final BufferedImage image;
     private final Canvas canvas;
     private final BufferStrategy strategy;
-    private final Graphics g;
+    private final Graphics g; //aux to draw the main image of the window
 
     public Window(Engine engine) {
-        this.engine = engine;
         image = toCompatibleImage(new BufferedImage(engine.getWidth(), engine.getHeight(), BufferedImage.TYPE_INT_RGB));
 
         canvas = new Canvas();
@@ -24,7 +21,7 @@ public class Window {
         int canvasHeight = (int) (engine.getHeight() * engine.getScale());
         Dimension d = new Dimension(canvasWidth, canvasHeight);
 
-        frame = new JFrame("teste hehehehe"); //should receive a good title from param...
+        frame = new JFrame(""); //should receive a good title from param...
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
         frame.add(canvas, BorderLayout.CENTER);
