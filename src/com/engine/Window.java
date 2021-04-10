@@ -21,7 +21,7 @@ public class Window {
         int canvasHeight = (int) (engine.getHeight() * engine.getScale());
         Dimension d = new Dimension(canvasWidth, canvasHeight);
 
-        frame = new JFrame(""); //should receive a good title from param...
+        frame = new JFrame("Application"); //should receive a good title from param...
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
         frame.add(canvas, BorderLayout.CENTER);
