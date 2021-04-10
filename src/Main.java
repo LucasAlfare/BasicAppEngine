@@ -2,6 +2,8 @@ import com.engine.AbstractApplication;
 import com.engine.Engine;
 import com.engine.Renderer;
 
+import java.awt.*;
+
 public class Main extends AbstractApplication {
 
     public Main() {
@@ -15,7 +17,7 @@ public class Main extends AbstractApplication {
 
     @Override
     public void render(Engine engine, Renderer renderer) {
-
+        final Graphics2D g = renderer.g2d;
     }
 
     public static void main(String[] args) {
