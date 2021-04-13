@@ -15,9 +15,9 @@ public class Engine implements Runnable {
     private Window window;
     private Renderer renderer;
     private Input input;
-    private final AbstractApplication application;
+    private final AbstractApp application;
 
-    public Engine(AbstractApplication application) {
+    public Engine(AbstractApp application) {
         this.application = application;
         setScale(1f);
     }

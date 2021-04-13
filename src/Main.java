@@ -1,10 +1,10 @@
-import com.engine.AbstractApplication;
+import com.engine.AbstractApp;
 import com.engine.Engine;
 import com.engine.Renderer;
 
 import java.awt.*;
 
-public class Main extends AbstractApplication {
+public class Main extends AbstractApp {
 
     public Main() {
 

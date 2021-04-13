@@ -1,6 +1,6 @@
 package com.engine;
 
-public abstract class AbstractApplication {
+public abstract class AbstractApp {
 
     private long last;
     private volatile boolean started = false;
