@@ -27,6 +27,7 @@ public class Window {
         frame.add(canvas, BorderLayout.CENTER);
 
         frame.setResizable(false);
+        //frame.setUndecorated(true);
         frame.setVisible(true);
 
         canvas.createBufferStrategy(2);
